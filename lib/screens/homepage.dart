@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage>
   @override
   void initState() {
     super.initState();
-    _scrollController = ScrollController();
+    _scrollController = ScrollController(initialScrollOffset: 0);
     _scrollController.addListener(scrollListener);
     animController = AnimationController(
       vsync: this,
@@ -559,10 +559,14 @@ class _HomePageState extends State<HomePage>
                                         valueListenable: selectedCatNotifier,
                                         builder: (BuildContext context,
                                             int value, Widget child) {
-                                          _scrollController.animateTo(335,
-                                              curve: Curves.easeIn,
-                                              duration:
-                                                  Duration(milliseconds: 600));
+                                          Future.delayed(Duration(seconds: 1),
+                                              () {
+                                            if (_scrollController.hasClients)
+                                              _scrollController?.animateTo(335,
+                                                  curve: Curves.easeIn,
+                                                  duration: Duration(
+                                                      milliseconds: 600));
+                                          });
                                           return ListView.builder(
                                             shrinkWrap: true,
                                             itemCount: 22,
@@ -1078,3 +1082,6 @@ List<Category> catList() {
   for (int i = 0; i < 12; i++) list.add(Category(name: "cat name $i", id: i));
   return list;
 }
+
+
+

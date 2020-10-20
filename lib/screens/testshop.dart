@@ -4,8 +4,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:food_app/common.dart';
 import 'package:food_app/services/firebase/firebase_auth.dart';
-import 'package:food_app/services/firebase/saveimage.dart';
-
 import 'package:provider/provider.dart';
 
 class TestShop extends StatefulWidget {
@@ -273,14 +271,178 @@ class _AddFoodCardState extends State<AddFoodCard> {
   }
 }
 
-class FileUploadToCloud extends StatefulWidget {
-  @override
-  _FileUploadToCloudState createState() => _FileUploadToCloudState();
+createFood() {
+  String image =
+      "https://www.jing.fm/clipimg/full/155-1559839_prepared-by-world-famous-cook-food-momo-png.png";
+
+  Food(
+    name: "Lemon Ice Tea",
+    increment: 1,
+    isSpecial: true,
+    price: 130,
+    image: image,
+  );
+  Food(
+    name: "Peach Ice Tea",
+    increment: 1,
+    isSpecial: true,
+    price: 150,
+    image: image,
+  );
+  Food(
+    name: "Mojito Ice Tea",
+    increment: 1,
+    isSpecial: true,
+    price: 160,
+    image: image,
+  );
+  Food(
+    name: "Mint Lemonade",
+    increment: 1,
+    isSpecial: true,
+    price: 160,
+    image: image,
+  );
+  Food(
+    name: "Peach Lemonade",
+    increment: 1,
+    isSpecial: true,
+    price: 150,
+    image: image,
+  );
+  Food(
+    name: "Strawberry Lemonade",
+    increment: 1,
+    isSpecial: true,
+    price: 150,
+    image: image,
+  );
+  Food(
+    name: "English Breakfast Tea",
+    increment: 1,
+    isSpecial: true,
+    price: 50,
+    image: image,
+  );
+  Food(
+    name: "Earl Grey Tea",
+    increment: 1,
+    isSpecial: true,
+    price: 50,
+    image: image,
+  );
+  Food(
+      name: "Flavoured Tea",
+      increment: 1,
+      isSpecial: true,
+      price: 50,
+      image: image,
+      variety: ['Peach', 'strawberry', 'chocolate']);
+  Food(
+    name: "Hot Lemon With Honey",
+    increment: 1,
+    isSpecial: true,
+    price: 50,
+    image: image,
+  );
+  Food(
+    name: "Veg Burger",
+    increment: 1,
+    isSpecial: true,
+    price: 120,
+    image: image,
+  );
+  Food(
+    name: "Veg Burger",
+    increment: 1,
+    isSpecial: true,
+    price: 150,
+    image: image,
+  );
+  Food(
+    name: "Additional cheese",
+    increment: 1,
+    isSpecial: true,
+    price: 50,
+    image: image,
+  );
+  Food(
+    name: "Egg roll",
+    increment: 1,
+    isSpecial: true,
+    price: 120,
+    image: image,
+  );
+  Food(
+    name: "Egg Chicken roll",
+    increment: 1,
+    isSpecial: true,
+    price: 150,
+    image: image,
+  );
+  Food(
+    name: "Egg Tuna roll",
+    increment: 1,
+    isSpecial: true,
+    price: 150,
+    image: image,
+  );
+  Food(
+    name: "Veg sandwich",
+    increment: 1,
+    isSpecial: true,
+    price: 150,
+    image: image,
+  );
+  Food(
+    name: "Tuna sandwich",
+    increment: 1,
+    isSpecial: true,
+    price: 150,
+    image: image,
+  );
+  Food(
+    name: "Chicken sandwich",
+    increment: 1,
+    isSpecial: true,
+    price: 150,
+    image: image,
+  );
+  Food(
+    name: "Club sandwich",
+    increment: 1,
+    isSpecial: true,
+    price: 200,
+    image: image,
+  );
+  Food(
+      name: "Buff kothey Momo",
+      increment: 1,
+      unit: "plate",
+      isSpecial: true,
+      price: 120,
+      image: image,
+      variety: ['Peach', 'strawberry', 'chocolate']);
+  Food(
+    name: "Chicken kothey Momo",
+    increment: 1,
+    unit: "plate",
+    isSpecial: true,
+    price: 150,
+    image: image,
+  );
 }
 
-class _FileUploadToCloudState extends State<FileUploadToCloud> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
+createCategory() {
+  FoodCategory(name: "Ice tea");
+  FoodCategory(name: "Lemonade");
+  FoodCategory(name: "Tea varieties");
+  FoodCategory(name: "burger");
+  FoodCategory(name: "egg rolls");
+  FoodCategory(name: "sandwitch");
+  FoodCategory(name: "momo");
+}
+
+createGroup() {
+  List<String> groups = ["Drinks", "Food items"];
 }

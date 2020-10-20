@@ -2,8 +2,6 @@ import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:food_app/screens/testshop.dart';
-
 import 'package:google_sign_in/google_sign_in.dart';
 
 enum LoginStates { loggedIn, loggedOut, loading, error }
@@ -247,6 +245,7 @@ class Shop {
   String currency;
   String id;
   String email;
+  List<String> foodGroups;
 
   Shop(
       {this.image,
@@ -257,6 +256,7 @@ class Shop {
       this.name,
       this.currency,
       this.id,
+      this.foodGroups,
       this.email});
 
   Shop.fromJson(Map<String, dynamic> json) {
@@ -270,6 +270,7 @@ class Shop {
     currency = json['currency'];
     id = json['id'];
     email = json['email'];
+    foodGroups = json['foodGroups'];
   }
 
   Map<String, dynamic> toJson() {
@@ -283,6 +284,7 @@ class Shop {
     data['currency'] = this.currency;
     data['id'] = this.id;
     data['email'] = this.email;
+    data['foodGroups'] = this.foodGroups;
     return data;
   }
 }
@@ -300,20 +302,24 @@ class Food {
   String description;
   int discount;
   String id;
+  String category;
+  List<String> variety;
 
-  Food(
-      {this.image,
-      this.unit,
-      this.ofShop,
-      this.isSpecial,
-      this.price,
-      this.rating,
-      this.count,
-      this.name,
-      this.increment,
-      this.description,
-      this.discount,
-      this.id});
+
+  Food({this.image,
+    this.unit,
+    this.ofShop,
+    this.isSpecial,
+    this.price,
+    this.rating,
+    this.count,
+    this.name,
+    this.increment,
+    this.description,
+    this.discount,
+    this.category,
+    this.variety,
+    this.id});
 
   Food.fromJson(Map<String, dynamic> json) {
     image = json['image'];
@@ -328,6 +334,8 @@ class Food {
     description = json['description'];
     discount = json['discount'];
     id = json['id'];
+    category = json['category'];
+    variety = json['variety'];
   }
 
   Map<String, dynamic> toJson() {
@@ -344,6 +352,31 @@ class Food {
     data['description'] = this.description;
     data['discount'] = this.discount;
     data['id'] = this.id;
+    data['category'] = this.category;
     return data;
   }
 }
+
+class FoodCategory {
+  String name;
+  String ofGroup;
+  String id;
+
+  FoodCategory({this.name, this.id});
+
+  FoodCategory.fromJson(Map<String, dynamic> json) {
+    this.name = json['image'];
+    this.ofGroup = json['ofGroup'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['name'] = this.name;
+    data['ofGroup'] = this.ofGroup;
+
+
+    return data;
+  }
+}
+
+

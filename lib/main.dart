@@ -4,11 +4,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-
 import 'package:food_app/common.dart';
 import 'package:food_app/screens/login.dart';
 import 'package:food_app/screens/testshop.dart';
-import 'package:food_app/screens/uploadtask.dart';
 import 'package:food_app/services/firebase/firebase_auth.dart';
 import 'package:provider/provider.dart';
 
@@ -34,8 +32,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.deepOrange,
         ),
-        home: TestShop(),
-      ),
+        home: TestShop()),
     );
   }
 }
