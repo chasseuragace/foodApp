@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/services/firebase/firebase_auth.dart';
+import 'package:food_app/providers/firebase/firebase_auth.dart';
+import 'package:food_app/providers/firebase/service_manager.dart';
+import 'package:food_app/widgets/common.dart';
 import 'package:provider/provider.dart';
-
-import '../common.dart';
 
 class LoginPage extends StatefulWidget {
   final LoginStates data;

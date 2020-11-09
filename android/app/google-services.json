@@ -15,6 +15,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "222470704455-vg9bp027882muio09p1bcstft7a3su80.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chasseuragace.food_app",
+            "certificate_hash": "2585b7977fba4be072fdeaecb071d454118387f6"
+          }
+        },
+        {
+          "client_id": "222470704455-d8p4t9hbjfhks2bfiiodevl9f62ddt92.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chasseuragace.food_app",
+            "certificate_hash": "cfb8c9620a2b4f8d6fca30a1abaa39654da18e6e"
+          }
+        },
+        {
           "client_id": "222470704455-tlobsq2gop08b8atsc8se774pdnlb8pm.apps.googleusercontent.com",
           "client_type": 3
         }
